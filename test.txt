@@ -1,0 +1,107 @@
+what is a Software Development Life Cycle (SDLC)?
+
+Different Software development models?
+mainly check for Waterfall model, V model and Agile model.
+
+What is Software Testing Life Cycle (STLC)?
+
+Explain BUG Life Cycle.
+
+Testing basics:
+
+Different types of testing:
+
+Black box testing: it is a testing strategy based solely on requirements and specifications. Black box testing requires no knowledge of internal paths, structures, or implementation of the software being tested.
+> Example:- the application you are working on has only GUI(graphical user interface), so what's going behind the screen is unknown to tester. so the testing of application is based on the specification document. If the document says the user should land into HomePage after successful login, in that case if it is not navigating to homepage after successful login, its a bug.
+
+White box testing: it is a testing strategy based on internal paths, code structures, and implementation of the software being tested. White box testing generally requires detailed programming skills.
+> generally it involves testing the software with interaction with internal software code, and sometimes requires to write codes to test certain conditions.
+
+Gray box testing: it is a hybrid of both black box and white box testing, which involves minimal understanding of internal code and structure to perform better black box testing.
+
+
+Testing levels:
+
+Unit testing: Tests that verify the functionality of a specific section of code, usually at the function level.
+> this is done by code developers, to check whether the code written is working properly or not. these are the tests, which verify the smallest unit in the code. EX: a login page may contain username field, password field and a login button, so the unit test may verify that these fields accept values as per specification and the login button is click-able.
+
+integration testing: it's a type of software testing which verify the interfaces between components against a software design. that is to check if the different units integrated are working as per the requirements.
+> EX: the specification says that after successful login the user should be navigated to HomePage. In this case when the developer integrate the login page with the HomePage, tester needs to verify that it is navigating to home page after successful login. also the tester validate that it is not navigating to homePage on unsuccessful login. so verification is to check if the application is working as per the specification and validation is to check that the application does not do what it is not intended to do. 
+
+System testing: end-to-end testing, tests a completely integrated system to verify that it meets its requirements.
+only the complete application is integrated together, the application is intended to perform different activities, example buying goods on e-commerce website may involve selecting the goods, filling shiiping details, approving the order, all these activities has to perform as intended, else the enduser will not be able to order and the application owner may run under loss. In this testing we are verifying the complete end-to-end process.
+
+Acceptance testing: Acceptance testing performed by the customer (the owner of software, who is customer for Software industry), often in their lab environment on their own hardware, is known as user acceptance testing (UAT).
+> this is performed to verify that they are receiving the product, they requested for, its a kind on end-to-end testing done by product owner.
+mainly it is divided into 2 types: 
+Alpha testing: the acceptance testing done by tesrtrs/users at the developers' site.
+Beta testing: Beta testing comes after alpha testing and can be considered a form of external user acceptance testing. Versions of the software, known as beta versions, are released to a limited audience outside of the programming team known as beta testers.
+
+All the above mentioned testing types are mainly concentrated on functionality of the software. there are some non-functional testing like cheking the security of the application, checking the performance of the application when the application is accessed by multiple users at the same time.
+
+Security testing:
+Security testing is essential for software that processes confidential data to prevent system intrusion by hackers.
+> bank data stored in database is highly sensitive data, and should not be able to access by an unintended end user by any means, this is verified by security testers. there are separate teams dedicated and trained to perform these testing.
+
+Performance testing: 
+Performance testing is generally executed to determine how a system or sub-system performs in terms of responsiveness and stability under a particular workload.
+> example 1: what will happen if the application is accessed by 100,000 users at a time (ex- railway reservation application), will the server be able to respond?
+> example 2: is the application response time is as per the standard. how much time it is taking to load a web page?, there are standard that says maximum tame allowed to load a web page (for example if the login page takes 10 second to load, and the standard says maximum time allowed is 8 seconds, it is a performance issue)
+there are seperate teams allocated for this type of testin also.
+
+Testing techniques:
+Black Box and White Box are testing types and not testing techniques.
+Testing techniques are as follows:-
+The most popular Black box testing techniques are:-
+> Equivalence Partitioning.
+> Boundary Value Analysis.
+> Cause-Effect Graphing.
+> Error-Guessing.
+The White-Box testing techniques are: -
+> Statement coverage
+> Decision coverage
+> Condition coverage         
+> Decision-condition coverage
+> Multiple condition coverage
+> Basis Path Testing
+> Loop testing
+> Data flow testing
+
+Further reading:
+code coverage.
+Agile Methodology(http://www.softwaretestinghelp.com/25-best-agile-testing-interview-questions-and-answers/)
+Bug vs Issue
+verification vs validation
+
+Domain understanding (Health Care domain which you are working on) will be an added advantage.
+> go through the domain related questions.
+
+practical question:
+
+1. write test case for a login page containing username field, password field and login button?
+Answer:
+testcase01 - positive scenario: login with valid username and password and click login button, user should be able to login successfully.
+testCase02 - negative scenario: login with valid username and invalid password, user should not be able to login.
+testcase03 - negative scenario: login with invlid username and valid password, user should not be able to login.
+depends up on the specification, other tests are required, if the specification says password field should not accept values less that 8 digits.
+testcase04 - negative scenario: login with valid username and password length less than 8 digits.
+similarly test cases are written for different scenarios as per the specification.
+
+2. Explain the bug life cycle.
+
+Terminologies:
+Software requirement document is also referred as Specification document or UseCase document(initially a user story for requirement).
+
+Tools: 
+There are many tools dedicated to perform different activities in the Software Development Life Cycle, so it is not mandatory that tester will be aware of all these tools, but the minimal understanding of these tools is required to be able to use these tools.
+
+EX: HP ALM (HP application lifecycle management tool), basically it is similar to tracking your order on a e-commerce site.
+1. Any requirement will be created as a task/sub-tasks (design, development, testing etc.) in this tool.
+2. Then each activity is tracked to closer (which contains the start date, the end date and the effort logged for the task)
+3. During testing if the tester finds a bug, it will be created as a bug in the application bug tracker and tracked to closer.
+NOTE: a good bug description is one, which contains complete details of the issue. That is what is the data to be used, and the steps to be followed from start to trigger the scenario.
+4. once all the bugs are closed and implementation is completed the same status will the updated and the task will be closed. so the tool will contain all these details whenever we need any information regarding the particular task.
+
+there may be different tool for task tracking, bug tracking, requirement tracking etc, but the core functionality will be same.
+
+Excel sheets: knowledge of using excel spreadsheets is required, as most of the projects make use of excel sheets to write and maintain test cases. 

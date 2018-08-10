@@ -1,0 +1,1551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="f4854fe3-7e4b-4fb3-9b62-6921ac737b49" activeEnvironment="Default environment" name="ren-srv-senv-soapui-project" lastOpened="2016-10-23T12:38:15.053+05:30" resourceRoot="" soapui-version="6.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c1b78d91-af59-4548-b038-ab07ae954778" wsaVersion="NONE" name="RENSCustomerRuleService_V15_1PortTypeSoap11" type="wsdl" bindingName="{urn:srv.ren.enterprise.fs.edb.com:ws:customerrule:v15_1}RENSCustomerRuleService_V15_1PortTypeSoap11" soapVersion="1_1" anonymous="optional" definition="http://10.246.89.245:10700/corewsdpgensrv/services/RENSCustomerRuleService_V15_1?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://10.246.89.245:10700/corewsdpgensrv/services/RENSCustomerRuleService_V15_1?wsdl"><con:part><con:url>http://10.246.89.245:10700/corewsdpgensrv/services/RENSCustomerRuleService_V15_1?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="urn:srv.ren.enterprise.fs.edb.com:ws:customerrule:v15_1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="urn:srv.ren.enterprise.fs.edb.com:ws:customerrule:v15_1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch4="urn:srv.ren.enterprise.fs.edb.com:domain:customerrule:v15_1" xmlns:sch3="urn:enterprise.fs.edb.com:domain:common:v1" xmlns:sch2="http://edb.com/ws/WSCommon_v21" xmlns:sch1="urn:corews.enterprise.fs.edb.com:domain:common:v2" xmlns:sch0="urn:srv.ren.enterprise.fs.edb.com:ws:customerrule:v15_1">
+  <wsdl:types>
+    <schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:srv.ren.enterprise.fs.edb.com:ws:customerrule:v15_1" xmlns:enterprisecommon="urn:enterprise.fs.edb.com:domain:common:v1" xmlns:customerrule151="urn:srv.ren.enterprise.fs.edb.com:domain:customerrule:v15_1" xmlns:corewscommon="urn:corews.enterprise.fs.edb.com:domain:common:v2" xmlns="http://www.w3.org/2001/XMLSchema">
+      <annotation>
+        <documentation>The service handles customer rule information inside the Rule Engine domain.
+
+			Available operations:
+				customerRuleListAggregated	V15_1</documentation>
+      </annotation>
+      <import namespace="urn:corews.enterprise.fs.edb.com:domain:common:v2"/>
+      <import namespace="urn:enterprise.fs.edb.com:domain:common:v1"/>
+      <import namespace="urn:srv.ren.enterprise.fs.edb.com:domain:customerrule:v15_1"/>
+      <element name="customerRuleListAggregatedRequest" type="tns:customerRuleListAggregatedRequestType"/>
+      <element name="customerRuleListAggregatedResponse" type="tns:customerRuleListAggregatedResponseType"/>
+      <element name="customerRuleListAggregatedFault" type="enterprisecommon:responseStateCodedFault"/>
+      <complexType name="customerRuleListAggregatedRequestType">
+        <annotation>
+          <documentation>This operation returns an aggregated list of customer rules in Rule Engine for a customer.</documentation>
+        </annotation>
+        <sequence>
+          <element name="qualification" type="customerrule151:customerRuleListAggregatedQualificationType"/>
+        </sequence>
+      </complexType>
+      <complexType name="customerRuleListAggregatedResponseType">
+        <annotation>
+          <documentation>Contains the response for operation customerRuleListAggregated.
+				
+				Error codes:</documentation>
+        </annotation>
+        <complexContent>
+          <extension base="enterprisecommon:baseResponseType">
+            <sequence>
+              <element minOccurs="0" name="result" type="customerrule151:customerRuleListAggregatedResultType"/>
+              <element minOccurs="0" name="customerInformation" type="corewscommon:customerInformationType"/>
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+    </schema>
+    <schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:corews.enterprise.fs.edb.com:domain:common:v2" xmlns:tns="urn:corews.enterprise.fs.edb.com:domain:common:v2" xmlns="http://www.w3.org/2001/XMLSchema">
+      <annotation>
+        <documentation>Common type definitions.</documentation>
+      </annotation>
+      <simpleType name="alphaNumMax1Type">
+        <annotation>
+          <documentation>1 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="1"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax2Type">
+        <annotation>
+          <documentation>2 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="2"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax3Type">
+        <annotation>
+          <documentation>3 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="3"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax4Type">
+        <annotation>
+          <documentation>4 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="4"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax5Type">
+        <annotation>
+          <documentation>5 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="5"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax6Type">
+        <annotation>
+          <documentation>6 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="6"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax7Type">
+        <annotation>
+          <documentation>7 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="7"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax8Type">
+        <annotation>
+          <documentation>8 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="8"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax9Type">
+        <annotation>
+          <documentation>9 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="9"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax10Type">
+        <annotation>
+          <documentation>10 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="10"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax11Type">
+        <annotation>
+          <documentation>11 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="11"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax12Type">
+        <annotation>
+          <documentation>12 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="12"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax13Type">
+        <annotation>
+          <documentation>13 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="13"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax15Type">
+        <annotation>
+          <documentation>15 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="15"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax16Type">
+        <annotation>
+          <documentation>16 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="16"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax17Type">
+        <annotation>
+          <documentation>17 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="17"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax18Type">
+        <annotation>
+          <documentation>18 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="18"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax19Type">
+        <annotation>
+          <documentation>19 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="19"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax20Type">
+        <annotation>
+          <documentation>20 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="20"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax22Type">
+        <annotation>
+          <documentation>22 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="22"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax23Type">
+        <annotation>
+          <documentation>23 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="23"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax25Type">
+        <annotation>
+          <documentation>25 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="25"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax26Type">
+        <annotation>
+          <documentation>26 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="26"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax27Type">
+        <annotation>
+          <documentation>27 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="27"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax30Type">
+        <annotation>
+          <documentation>30 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="30"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax32Type">
+        <annotation>
+          <documentation>32 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="32"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax34Type">
+        <annotation>
+          <documentation>34 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="34"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax35Type">
+        <annotation>
+          <documentation>35 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="35"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax42Type">
+        <annotation>
+          <documentation>42 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="42"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax50Type">
+        <annotation>
+          <documentation>50 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="50"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax60Type">
+        <annotation>
+          <documentation>60 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="60"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax70Type">
+        <annotation>
+          <documentation>70 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="70"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax78Type">
+        <annotation>
+          <documentation>78 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="78"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax80Type">
+        <annotation>
+          <documentation>80 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="80"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax120Type">
+        <annotation>
+          <documentation>120 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="120"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax140Type">
+        <annotation>
+          <documentation>140 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="140"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax200Type">
+        <annotation>
+          <documentation>200 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="200"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax220Type">
+        <annotation>
+          <documentation>220 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="220"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax250Type">
+        <annotation>
+          <documentation>250 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="250"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax255Type">
+        <annotation>
+          <documentation>255 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="255"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax256Type">
+        <annotation>
+          <documentation>256 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="256"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax400Type">
+        <annotation>
+          <documentation>400 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="400"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="intMax1Type">
+        <annotation>
+          <documentation>Integer value with max length 1</documentation>
+        </annotation>
+        <restriction base="int">
+          <totalDigits value="1"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="intMax2Type">
+        <annotation>
+          <documentation>Integer value with max length 2</documentation>
+        </annotation>
+        <restriction base="int">
+          <totalDigits value="2"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="intMax3Type">
+        <annotation>
+          <documentation>Integer value with max length 3</documentation>
+        </annotation>
+        <restriction base="int">
+          <totalDigits value="3"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="intMax4Type">
+        <annotation>
+          <documentation>Integer value with max length 4</documentation>
+        </annotation>
+        <restriction base="int">
+          <totalDigits value="4"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="intMax5Type">
+        <annotation>
+          <documentation>Integer value with max length 5</documentation>
+        </annotation>
+        <restriction base="int">
+          <totalDigits value="5"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="intMax6Type">
+        <annotation>
+          <documentation>Integer value with max length 6</documentation>
+        </annotation>
+        <restriction base="int">
+          <totalDigits value="6"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="intMax7Type">
+        <annotation>
+          <documentation>Integer value with max length 7</documentation>
+        </annotation>
+        <restriction base="int">
+          <totalDigits value="7"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="intMax9Type">
+        <annotation>
+          <documentation>Integer value with max length 9</documentation>
+        </annotation>
+        <restriction base="int">
+          <totalDigits value="9"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="intMin1Max999Type">
+        <restriction base="int">
+          <minInclusive value="1"/>
+          <maxInclusive value="999"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="longMax10Type">
+        <annotation>
+          <documentation>Long value with max length 10</documentation>
+        </annotation>
+        <restriction base="long">
+          <totalDigits value="10"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="longMax11Type">
+        <annotation>
+          <documentation>Long value with max length 11</documentation>
+        </annotation>
+        <restriction base="long">
+          <totalDigits value="11"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="longMax12Type">
+        <annotation>
+          <documentation>Long value with max length 12</documentation>
+        </annotation>
+        <restriction base="long">
+          <totalDigits value="12"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="longMax13Type">
+        <annotation>
+          <documentation>Long value with max length 13</documentation>
+        </annotation>
+        <restriction base="long">
+          <totalDigits value="13"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="longMax16Type">
+        <annotation>
+          <documentation>Long value with max length 16</documentation>
+        </annotation>
+        <restriction base="long">
+          <totalDigits value="16"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="longMax18Type">
+        <annotation>
+          <documentation>Long value with max length 18</documentation>
+        </annotation>
+        <restriction base="long">
+          <totalDigits value="18"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax100Type">
+        <annotation>
+          <documentation>35 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="100"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax40Type">
+        <annotation>
+          <documentation>35 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="40"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphaNumMax240Type">
+        <annotation>
+          <documentation>35 CHAR length string</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="240"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="iban">
+        <annotation>
+          <documentation>IBAN number - International Bank Account Number, comprising a country code, two check digits and a basic bank account-number (BBAN), eg. NO5928012192284.</documentation>
+        </annotation>
+        <restriction base="string">
+          <minLength value="5"/>
+          <maxLength value="34"/>
+          <pattern value="[A-Z]{2,2}[0-9]{2,2}[a-zA-Z0-9]{1,30}"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="norwegianAccountNumber">
+        <annotation>
+          <documentation>Norwegian account number</documentation>
+        </annotation>
+        <restriction base="string">
+          <minLength value="11"/>
+          <maxLength value="11"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="norwegianCustomerNumber">
+        <annotation>
+          <documentation>Norwegian customer number</documentation>
+        </annotation>
+        <restriction base="string">
+          <minLength value="11"/>
+          <maxLength value="11"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="regBankNumber">
+        <annotation>
+          <documentation>Reg bank number</documentation>
+        </annotation>
+        <restriction base="string">
+          <pattern value="([0-9])*"/>
+          <minLength value="4"/>
+          <maxLength value="4"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="customerIntId">
+        <annotation>
+          <documentation>Customer internal id</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="12"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="userId">
+        <annotation>
+          <documentation>User id</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="7"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="customerIntIdNumeric">
+        <annotation>
+          <documentation>Numeric customer internal id</documentation>
+        </annotation>
+        <restriction base="long">
+          <totalDigits value="11"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="amount">
+        <annotation>
+          <documentation>Decimal value of max length 18 with 3 decimals</documentation>
+        </annotation>
+        <restriction base="decimal">
+          <totalDigits value="18"/>
+          <fractionDigits value="3"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="rate">
+        <annotation>
+          <documentation>Decimal value of max length 9 with 5 decimals</documentation>
+        </annotation>
+        <restriction base="decimal">
+          <totalDigits value="9"/>
+          <fractionDigits value="5"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="intId">
+        <annotation>
+          <documentation>Internal generated id</documentation>
+        </annotation>
+        <restriction base="long">
+          <totalDigits value="18"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="productNumber">
+        <annotation>
+          <documentation>Product number</documentation>
+        </annotation>
+        <restriction base="int">
+          <totalDigits value="4"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="sequenceNumber">
+        <annotation>
+          <documentation>Sequence number.</documentation>
+        </annotation>
+        <restriction base="int">
+          <totalDigits value="4"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="url">
+        <annotation>
+          <documentation>URL</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="1024"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="ratio">
+        <annotation>
+          <documentation>Ratio</documentation>
+        </annotation>
+        <restriction base="int">
+          <totalDigits value="3"/>
+          <maxInclusive value="100"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="typeCode5">
+        <annotation>
+          <documentation>Alphanumeric value with length 5</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="5"/>
+          <pattern value="([A-Z0-9\-])+"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="organisationUnitStrictType">
+        <annotation>
+          <documentation>Permitted values:'PC' - Profit Centers;'OU' - Organization Units</documentation>
+        </annotation>
+        <restriction base="string">
+          <enumeration value="PC"/>
+          <enumeration value="OU"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="month">
+        <annotation>
+          <documentation>Month 1-12</documentation>
+        </annotation>
+        <restriction base="int">
+          <totalDigits value="2"/>
+          <minInclusive value="1"/>
+          <maxInclusive value="12"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="positiveIntegerMax11Type">
+        <annotation>
+          <documentation>Positive(>0) integer value with max length 11</documentation>
+        </annotation>
+        <restriction base="positiveInteger">
+          <totalDigits value="11"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="executiveOfficerId">
+        <annotation>
+          <documentation>Executive officer identification</documentation>
+        </annotation>
+        <restriction base="tns:alphaNumMax15Type"/>
+      </simpleType>
+      <simpleType name="executiveOfficerName">
+        <annotation>
+          <documentation>Executive officer name</documentation>
+        </annotation>
+        <restriction base="tns:alphaNumMax35Type"/>
+      </simpleType>
+      <simpleType name="shortName">
+        <annotation>
+          <documentation>Short name of customer</documentation>
+        </annotation>
+        <restriction base="tns:alphaNumMax15Type"/>
+      </simpleType>
+      <simpleType name="productId">
+        <annotation>
+          <documentation>Product identification</documentation>
+        </annotation>
+        <restriction base="tns:alphaNumMax18Type"/>
+      </simpleType>
+      <simpleType name="productShortName">
+        <annotation>
+          <documentation>Product short name - 6 characters</documentation>
+        </annotation>
+        <restriction base="tns:alphaNumMax6Type"/>
+      </simpleType>
+      <simpleType name="productSequenceNumber">
+        <annotation>
+          <documentation>Product sequence number</documentation>
+        </annotation>
+        <restriction base="tns:sequenceNumber"/>
+      </simpleType>
+      <simpleType name="productName">
+        <annotation>
+          <documentation>Product name</documentation>
+        </annotation>
+        <restriction base="tns:alphaNumMax35Type"/>
+      </simpleType>
+      <simpleType name="productIntId">
+        <annotation>
+          <documentation>Product internal id</documentation>
+        </annotation>
+        <restriction base="tns:intId"/>
+      </simpleType>
+      <simpleType name="profitCenter">
+        <annotation>
+          <documentation>Profit center id</documentation>
+        </annotation>
+        <restriction base="tns:alphaNumMax15Type"/>
+      </simpleType>
+      <simpleType name="profitCenterText">
+        <annotation>
+          <documentation>Profit center text</documentation>
+        </annotation>
+        <restriction base="tns:alphaNumMax35Type"/>
+      </simpleType>
+      <simpleType name="alias">
+        <annotation>
+          <documentation>Sets the alias that identifies the self service channel agreement.
+				Either use value from numeric alias (for cash call channel) or
+				alphanumeric alias (for internet bank, mobile bank, sms bank channel).</documentation>
+        </annotation>
+        <restriction base="tns:alphaNumMax35Type"/>
+      </simpleType>
+      <simpleType name="channel">
+        <annotation>
+          <documentation>Sets the self service channel.
+				Valid values:
+				WAP - Mobile bank channel agreement.
+				INT - Internet bank channel agreement.
+				SMS - Sms bank channel agreement.
+				TLF - Cash call channel agreement.</documentation>
+        </annotation>
+        <restriction base="tns:alphaNumMax5Type">
+          <enumeration value="WAP"/>
+          <enumeration value="INT"/>
+          <enumeration value="SMS"/>
+          <enumeration value="TLF"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="currencyCode">
+        <annotation>
+          <documentation>Currency code (ISO 4217)</documentation>
+        </annotation>
+        <restriction base="string">
+          <pattern value="([A-Z])*"/>
+          <minLength value="3"/>
+          <maxLength value="3"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="interestCalculationFactor">
+        <annotation>
+          <documentation>Interest calculation factor.</documentation>
+        </annotation>
+        <restriction base="int">
+          <enumeration value="360"/>
+          <enumeration value="365"/>
+          <enumeration value="366"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="interestCalculationDivisor">
+        <annotation>
+          <documentation>Interest calculation divisor.</documentation>
+        </annotation>
+        <restriction base="int">
+          <enumeration value="360"/>
+          <enumeration value="365"/>
+          <enumeration value="366"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="initialFunctionId">
+        <annotation>
+          <documentation>Application calling a service.</documentation>
+        </annotation>
+        <restriction base="tns:alphaNumMax8Type"/>
+      </simpleType>
+      <complexType name="customerInformationType">
+        <sequence>
+          <element minOccurs="0" name="customerNumber" type="tns:norwegianCustomerNumber"/>
+          <element minOccurs="0" name="shortName" type="tns:shortName"/>
+          <element minOccurs="0" name="profitCenter" type="tns:profitCenter"/>
+          <element minOccurs="0" name="profitCenterText" type="tns:profitCenterText"/>
+          <element minOccurs="0" name="productId" type="tns:productId"/>
+          <element minOccurs="0" name="productShortName" type="tns:productShortName"/>
+          <element minOccurs="0" name="executiveOfficerId" type="tns:executiveOfficerId"/>
+          <element minOccurs="0" name="executiveOfficerName" type="tns:executiveOfficerName"/>
+        </sequence>
+      </complexType>
+      <complexType name="customerKeyType">
+        <annotation>
+          <documentation>CustomerKey can be supplied by either the customer's
+				internal id or as the customer's customer number.</documentation>
+        </annotation>
+        <choice>
+          <element name="customerIntId" type="tns:customerIntIdNumeric">
+            <annotation>
+              <documentation>The customer internal id.</documentation>
+            </annotation>
+          </element>
+          <element name="customerNumber" type="tns:norwegianCustomerNumber">
+            <annotation>
+              <documentation>The customer number.</documentation>
+            </annotation>
+          </element>
+        </choice>
+      </complexType>
+      <complexType name="productKeyType">
+        <annotation>
+          <documentation>The product key consists of either (productNumber and
+				sequenceNumber) OR productId.</documentation>
+        </annotation>
+        <choice>
+          <element name="productKeyAlt1" type="tns:productKeyAlt1Type">
+            <annotation>
+              <documentation>Product key alternative 1 consists of product number
+						and product sequence number.</documentation>
+            </annotation>
+          </element>
+          <element name="productKeyAlt2" type="tns:productKeyAlt2Type">
+            <annotation>
+              <documentation>Product key alternative 2 consists of product id
+						only.</documentation>
+            </annotation>
+          </element>
+        </choice>
+      </complexType>
+      <complexType name="productKeyAlt1Type">
+        <annotation>
+          <documentation>Product key alternative 1 consists of the product
+				number and the product sequence number.</documentation>
+        </annotation>
+        <sequence>
+          <element minOccurs="0" name="productNumber" type="tns:productNumber">
+            <annotation>
+              <documentation>The product number.</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="sequenceNumber" type="tns:sequenceNumber">
+            <annotation>
+              <documentation>The product sequence number.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </complexType>
+      <complexType name="productKeyAlt2Type">
+        <annotation>
+          <documentation>Product key alternative 2 consists of the product id
+				only.</documentation>
+        </annotation>
+        <sequence>
+          <element minOccurs="0" name="productId" type="tns:productId">
+            <annotation>
+              <documentation>The product id.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </complexType>
+      <complexType name="selfServiceKeyType">
+        <annotation>
+          <documentation>SelfServiceKey consist of alias and channel, and
+				identifies a self service channel
+				agreement.
+				Both values must be set.</documentation>
+        </annotation>
+        <sequence>
+          <element name="alias" type="tns:alias">
+            <annotation>
+              <documentation>Sets the alias that identifies the self service
+						channel agreement.
+						Either use value from numeric alias (for cash
+						call channel) or
+						alphanumeric alias (for internet bank, mobile
+						bank, sms bank
+						channel).</documentation>
+            </annotation>
+          </element>
+          <element name="channel" type="tns:channel">
+            <annotation>
+              <documentation>Sets the self service channel.
+						Valid values:
+						WAP -
+						Mobile bank channel agreement.
+						INT - Internet bank channel
+						agreement.
+						SMS - Sms bank channel agreement.
+						TLF - Cash call channel
+						agreement.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </complexType>
+      <simpleType name="numericAlias">
+        <annotation>
+          <documentation>Numeric alias - which allows on all numerics as password and min and max is 11 digits.</documentation>
+        </annotation>
+        <restriction base="string">
+          <pattern value="[0-9]{11}"/>
+        </restriction>
+      </simpleType>
+    </schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://edb.com/ws/WSCommon_v21" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://edb.com/ws/WSCommon_v21">
+      <xsd:complexType name="ClientContextType">
+        <xsd:sequence>
+          <xsd:element name="userid" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Identifies the person who initiated the action This could either be the customer itself in a netbank) or an employee</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="credentials" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Authorization data. This is typically a security Object retriewed from a logon, but can also be a plain password.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="channel" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Indicated what type of application that initiated the request</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="orgid" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The OrganizationalId - will in a banking context be Financial Institution / Konsernnr</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="orgunit" nillable="true" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The Organizational unit will in a banking context be Branch / Registernr</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="customerid" nillable="true" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Id of the customer on which the operation is requested, may be the same as userid, but may well be different</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="locale" nillable="true" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Locale in a java syntax e.g "en_EN". May be used if application supports localized response</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="ip" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The ip adress of the client</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="itemType">
+            <xsd:annotation>
+              <xsd:documentation>Optionnal extention items - Add key/value pairs for application specific extentions</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="itemType">
+        <xsd:attribute name="key" type="xsd:string" use="required"/>
+        <xsd:attribute name="value" type="xsd:string" use="required"/>
+      </xsd:complexType>
+      <xsd:complexType name="EDBHeaderType">
+        <xsd:sequence>
+          <xsd:element name="SourceApplication" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Identifies the source that initiated the message. Used to separate different service consumers.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="DestinationApplication" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Identifies the destination of the message. Used to separate different service providers.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="Function" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Identifies the service to be called.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="Version" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Service version "X.Y.Z" according to this standard:
+                X = Main release (major changes, not necessarily backwards compatible)
+                Y = Minor release (backwards compatible, new functionality)
+                Z = Bugfix (backwards compatible, error correction only)</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="ClientContext" type="ClientContextType">
+            <xsd:annotation>
+              <xsd:documentation>Elements for identifying client context information.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="AutHeader" type="EDBHeaderType"/>
+      <xsd:complexType name="ResponseStateType">
+        <xsd:sequence>
+          <xsd:element name="ErrorCode" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Numeric error code reported for this error.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="Severity" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Response Status Severity Code</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="ComponentId" type="xsd:int">
+            <xsd:annotation>
+              <xsd:documentation>Unique code identifying the component returning the service response</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="StrErrorCode" nillable="true" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Deprecated: Error code represented as String</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="Message" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Message describing the error. Default is english language. Optionally localized according to the locale parameter in the service request</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="NativeError" nillable="true" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Deprecated: Optional detailed error information reported from involved components. Used for diagnostics purposes.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="LogSequence" nillable="true" type="xsd:long">
+            <xsd:annotation>
+              <xsd:documentation>Optional key generated to be used for log correlation purposes.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="errorItem" nillable="true" type="errorItemType">
+            <xsd:annotation>
+              <xsd:documentation>Optional extention items - key/value pairs are used for extented error inforamtion.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="errorItemType">
+        <xsd:annotation/>
+        <xsd:attribute name="key" type="xsd:string" use="required"/>
+        <xsd:attribute name="value" type="xsd:string" use="required"/>
+      </xsd:complexType>
+    </xsd:schema>
+    <schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:enterprise.fs.edb.com:domain:common:v1" xmlns:tns="urn:enterprise.fs.edb.com:domain:common:v1" xmlns:edbheader="http://edb.com/ws/WSCommon_v21" xmlns="http://www.w3.org/2001/XMLSchema">
+      <annotation>
+        <documentation>Common type definitions.</documentation>
+      </annotation>
+      <import namespace="http://edb.com/ws/WSCommon_v21"/>
+      <complexType name="responseStateCodedFault">
+        <annotation>
+          <documentation>Generic SoapFault type</documentation>
+        </annotation>
+        <sequence>
+          <element name="responseState" type="edbheader:ResponseStateType">
+            <annotation>
+              <documentation>Contains the distinct error-code and additional
+                        information on the actual error.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </complexType>
+      <simpleType name="pageLengthType">
+        <annotation>
+          <documentation>An type capable of describing a segments length or wished length</documentation>
+        </annotation>
+        <restriction base="int">
+          <minInclusive value="0"/>
+          <maxInclusive value="500"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="pageIndexType">
+        <annotation>
+          <documentation>Index of segment start</documentation>
+        </annotation>
+        <restriction base="int">
+          <minInclusive value="0"/>
+        </restriction>
+      </simpleType>
+      <complexType name="pagingInputElementType">
+        <annotation>
+          <documentation>Describes a paging segment</documentation>
+        </annotation>
+        <sequence>
+          <element name="startIndex" type="tns:pageIndexType"/>
+          <element name="pageSize" type="tns:pageLengthType"/>
+        </sequence>
+      </complexType>
+      <complexType name="pagingOutputElementType">
+        <annotation>
+          <documentation>Describes the returned segment</documentation>
+        </annotation>
+        <sequence>
+          <element name="numberOfElements" type="tns:pageLengthType">
+            <annotation>
+              <documentation>Number of elements returned</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </complexType>
+      <complexType abstract="true" name="pageResultType">
+        <annotation>
+          <documentation>Wraps paging and data elements</documentation>
+        </annotation>
+        <sequence>
+          <element name="pagingOutput" type="tns:pagingOutputElementType"/>
+          <element name="elements">
+            <complexType>
+              <sequence>
+                <any namespace="##other"/>
+              </sequence>
+            </complexType>
+          </element>
+        </sequence>
+      </complexType>
+      <simpleType name="generatedPkType">
+        <annotation>
+          <documentation>Generated primary key in database</documentation>
+        </annotation>
+        <restriction base="long"/>
+      </simpleType>
+      <simpleType name="optimisticLockVersionType">
+        <annotation>
+          <documentation>Version counter field used for optimistic locking
+				See: http://en.wikipedia.org/wiki/Optimistic_concurrency_control
+				This ensures data consistency when data travels across
+				layers.</documentation>
+        </annotation>
+        <restriction base="long"/>
+      </simpleType>
+      <complexType abstract="true" name="basePersistentEntityType">
+        <sequence>
+          <element minOccurs="0" name="pk" type="tns:generatedPkType">
+            <annotation>
+              <documentation>Bearer of the primary key.
+						Not present for an non-persisted entity.</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="version" type="tns:optimisticLockVersionType">
+            <annotation>
+              <documentation>The optimistic locking version field.
+						Not present for an non-persisted entity.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </complexType>
+      <complexType abstract="true" name="baseResponseType">
+        <annotation>
+          <documentation>Base response type which all services should extend off</documentation>
+        </annotation>
+        <sequence>
+          <element name="ResponseState" type="edbheader:ResponseStateType">
+            <annotation>
+              <documentation>The response state which describes the outcome of calling the service.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </complexType>
+      <element name="languageCode" type="tns:languageCodeType"/>
+      <element name="currencyCode" type="tns:currencyCodeType"/>
+      <element name="logonId" type="tns:alphanumeric12"/>
+      <element name="profitCenterExtId" type="tns:text15"/>
+      <element name="issuerNo" type="tns:issuerNoType"/>
+      <element name="organisationNo" type="tns:alphanumeric12"/>
+      <element name="legalOrganisationNo" type="tns:text15"/>
+      <element name="customerIntId" type="tns:generatedCharID12Type"/>
+      <element name="customerNumber" type="tns:text15"/>
+      <element name="customerNumberNO" type="tns:customerNumberNOType">
+        <annotation>
+          <documentation>Official/legal customer number,
+				f.ex. Social security
+				number. Norwegian format</documentation>
+        </annotation>
+      </element>
+      <element name="createDate" type="date">
+        <annotation>
+          <documentation>the date an occurrence was created in the database</documentation>
+        </annotation>
+      </element>
+      <element name="createTime" type="time">
+        <annotation>
+          <documentation>the time an occurrence was created in the database</documentation>
+        </annotation>
+      </element>
+      <element name="productElementIntId" type="tns:generatedCharID15Type"/>
+      <element name="accountNumber" type="tns:accountNumberType"/>
+      <element name="accountNumberNO" type="tns:accountNumberNOType"/>
+      <element name="swiftBicCode" type="tns:alphanumeric11"/>
+      <element name="listFrom" type="short"/>
+      <element name="listTo" type="short"/>
+      <element name="countryCode" type="tns:countryCodeType"/>
+      <element name="moreOccurences" type="boolean">
+        <annotation>
+          <documentation>True: there are more occurrences than in the result list 
+						   False: there are not more occurrences last occurrency is delivered in the result list</documentation>
+        </annotation>
+      </element>
+      <element name="openDate" type="date">
+        <annotation>
+          <documentation>Open date of an occurrence, 
+			f.ex. the date when the customer became a customer 
+			and not the date the customer was registered in the database</documentation>
+        </annotation>
+      </element>
+      <element name="lastChangeDate" type="date">
+        <annotation>
+          <documentation>The date the customer was last changed.</documentation>
+        </annotation>
+      </element>
+      <element name="lastChangeTime" type="time">
+        <annotation>
+          <documentation>The time the customer was last changed.</documentation>
+        </annotation>
+      </element>
+      <simpleType name="createdByLogonid">
+        <annotation>
+          <documentation>Refers to the name of who first time made this record</documentation>
+        </annotation>
+        <restriction base="tns:alphanumeric12"/>
+      </simpleType>
+      <simpleType name="lastChangeLogonid">
+        <annotation>
+          <documentation>User that last changed the occurrence.</documentation>
+        </annotation>
+        <restriction base="tns:alphanumeric12"/>
+      </simpleType>
+      <simpleType name="countryCodeType">
+        <annotation>
+          <documentation>ISO-3166-1 standard country code with length 2</documentation>
+        </annotation>
+        <restriction base="string">
+          <pattern value="[A-Z]{2}"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="languageCodeType">
+        <annotation>
+          <documentation>ISO-639-2 language code with length 3</documentation>
+        </annotation>
+        <restriction base="string">
+          <pattern value="[A-Z]{3}"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="currencyCodeType">
+        <annotation>
+          <documentation>ISO-4217 currency code with length 3</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="3"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="typeCode5">
+        <annotation>
+          <documentation>Alphanumeric value with length 5</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="5"/>
+          <pattern value="([A-Z0-9\-])+"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="issuerNoType">
+        <annotation>
+          <documentation>Issuer identification number</documentation>
+        </annotation>
+        <restriction base="int">
+          <totalDigits value="9"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="typeCode10">
+        <annotation>
+          <documentation>Alphanumeric value with length 10</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="10"/>
+          <pattern value="([A-Z0-9\-])+"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphanumeric11">
+        <annotation>
+          <documentation>Alphanumeric value with length 11</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="11"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="generatedCharID12Type">
+        <annotation>
+          <documentation>system generated ID</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="12"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="alphanumeric12">
+        <annotation>
+          <documentation>Alphanumeric value with length 12</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="12"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="generatedCharID15Type">
+        <annotation>
+          <documentation>system generated ID</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="15"/>
+          <pattern value="([A-Z0-9\-])+"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="text15">
+        <annotation>
+          <documentation>Alphanumeric value with length 15</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="15"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="generatedNumId18Type">
+        <annotation>
+          <documentation>system generated ID</documentation>
+        </annotation>
+        <restriction base="long">
+          <totalDigits value="18"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="accountNumberType">
+        <annotation>
+          <documentation>BBAN account number</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="30"/>
+          <pattern value="([A-Z0-9\-])+"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="accountNumberNOType">
+        <annotation>
+          <documentation>BBAN account number, norwegian format</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="11"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="customerNumberNOType">
+        <annotation>
+          <documentation>Official/legal customer number. Norwegian format</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="11"/>
+        </restriction>
+      </simpleType>
+      <simpleType name="text35">
+        <annotation>
+          <documentation>Alphanumeric value with length 35</documentation>
+        </annotation>
+        <restriction base="string">
+          <maxLength value="35"/>
+        </restriction>
+      </simpleType>
+    </schema>
+    <schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:srv.ren.enterprise.fs.edb.com:domain:customerrule:v15_1" xmlns:tns="urn:srv.ren.enterprise.fs.edb.com:domain:customerrule:v15_1" xmlns:common="urn:corews.enterprise.fs.edb.com:domain:common:v2" xmlns="http://www.w3.org/2001/XMLSchema">
+      <annotation>
+        <documentation>Types for the RENSCustomerRuleService.</documentation>
+      </annotation>
+      <import namespace="urn:corews.enterprise.fs.edb.com:domain:common:v2"/>
+      <complexType name="customerRuleListAggregatedQualificationType">
+        <annotation>
+          <documentation>Qualification for operation customerRuleListAggregated</documentation>
+        </annotation>
+        <sequence>
+          <element name="customerNumber" type="common:norwegianCustomerNumber">
+            <annotation>
+              <documentation>The customer number to be queried.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </complexType>
+      <complexType name="customerRuleListAggregatedResultType">
+        <annotation>
+          <documentation>Result for operation customerRuleListAggregated</documentation>
+        </annotation>
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="customerRuleList" type="tns:customerRuleListAggregatedListDetailsType">
+            <annotation>
+              <documentation>The list of customer rules.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </complexType>
+      <complexType name="customerRuleListAggregatedListDetailsType">
+        <annotation>
+          <documentation>Details for a customer rule.</documentation>
+        </annotation>
+        <sequence>
+          <element name="ruleName" type="common:alphaNumMax30Type">
+            <annotation>
+              <documentation>The name of the customer rule.</documentation>
+            </annotation>
+          </element>
+          <element name="validFromDate" type="date">
+            <annotation>
+              <documentation>Valid from date for the customer rule</documentation>
+            </annotation>
+          </element>
+          <element name="validToDate" type="date">
+            <annotation>
+              <documentation>Valid to date for the customer rule</documentation>
+            </annotation>
+          </element>
+          <element maxOccurs="4" name="ruleDetails" type="tns:customerRuleListAggregatedRuleDetailsType">
+            <annotation>
+              <documentation>The events for this customer rule.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </complexType>
+      <complexType name="customerRuleListAggregatedRuleDetailsType">
+        <annotation>
+          <documentation>Details for a customer rule.</documentation>
+        </annotation>
+        <sequence>
+          <element name="ruleText" type="common:alphaNumMax30Type">
+            <annotation>
+              <documentation>A text for the rule.</documentation>
+            </annotation>
+          </element>
+          <element name="ruleValue" type="common:alphaNumMax30Type">
+            <annotation>
+              <documentation>A value for the rule</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </complexType>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="customerRuleListAggregatedRequest">
+    <wsdl:part element="sch2:AutHeader" name="SoapHeader"></wsdl:part>
+    <wsdl:part element="tns:customerRuleListAggregatedRequest" name="customerRuleListAggregatedRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="customerRuleListAggregatedFault">
+    <wsdl:part element="tns:customerRuleListAggregatedFault" name="customerRuleListAggregatedFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="customerRuleListAggregatedResponse">
+    <wsdl:part element="tns:customerRuleListAggregatedResponse" name="customerRuleListAggregatedResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RENSCustomerRuleService_V15_1PortType">
+    <wsdl:operation name="customerRuleListAggregated">
+      <wsdl:input message="tns:customerRuleListAggregatedRequest" name="customerRuleListAggregatedRequest"></wsdl:input>
+      <wsdl:output message="tns:customerRuleListAggregatedResponse" name="customerRuleListAggregatedResponse"></wsdl:output>
+      <wsdl:fault message="tns:customerRuleListAggregatedFault" name="customerRuleListAggregatedFault"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RENSCustomerRuleService_V15_1PortTypeSoap11" type="tns:RENSCustomerRuleService_V15_1PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="customerRuleListAggregated">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="customerRuleListAggregatedRequest">
+        <soap:header message="tns:customerRuleListAggregatedRequest" part="SoapHeader" use="literal"></soap:header>
+        <soap:body parts="customerRuleListAggregatedRequest" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="customerRuleListAggregatedResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="customerRuleListAggregatedFault">
+        <soap:fault name="customerRuleListAggregatedFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RENSCustomerRuleService_V15_1">
+    <wsdl:port binding="tns:RENSCustomerRuleService_V15_1PortTypeSoap11" name="RENSCustomerRuleService_V15_1PortTypeSoap11">
+      <soap:address location="http://10.246.89.245:10700/corewsdpgensrv/services/RENSCustomerRuleService_V15_1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://10.246.89.245:10700/corewsdpgensrv/services/RENSCustomerRuleService_V15_1</con:endpoint></con:endpoints><con:operation id="e21cc924-f0da-4e64-87dd-f1d1f17ca580" isOneWay="false" action="" name="customerRuleListAggregated" bindingOperationName="customerRuleListAggregated" type="Request-Response" outputName="customerRuleListAggregatedResponse" inputName="customerRuleListAggregatedRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b2408d05-122f-42ec-ac38-bcd285009a90" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.246.89.245:10700/corewsdpgensrv/services/RENSCustomerRuleService_V15_1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsc="http://edb.com/ws/WSCommon_v21" xmlns:urn="urn:srv.ren.enterprise.fs.edb.com:ws:customerrule:v15_1" xmlns:urn1="urn:srv.ren.enterprise.fs.edb.com:domain:customerrule:v15_1">\r
+   <soapenv:Header>\r
+      <wsc:AutHeader>\r
+         <wsc:SourceApplication>?</wsc:SourceApplication>\r
+         <wsc:DestinationApplication>?</wsc:DestinationApplication>\r
+         <wsc:Function>?</wsc:Function>\r
+         <wsc:Version>?</wsc:Version>\r
+         <wsc:ClientContext>\r
+            <wsc:userid>?</wsc:userid>\r
+            <wsc:credentials>?</wsc:credentials>\r
+            <wsc:channel>?</wsc:channel>\r
+            <wsc:orgid>?</wsc:orgid>\r
+            <!--Optional:-->\r
+            <wsc:orgunit>?</wsc:orgunit>\r
+            <!--Optional:-->\r
+            <wsc:customerid>?</wsc:customerid>\r
+            <!--Optional:-->\r
+            <wsc:locale>?</wsc:locale>\r
+            <wsc:ip>?</wsc:ip>\r
+            <!--Zero or more repetitions:-->\r
+            <wsc:item key="?" value="?"/>\r
+         </wsc:ClientContext>\r
+      </wsc:AutHeader>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <urn:customerRuleListAggregatedRequest>\r
+         <urn:qualification>\r
+            <urn1:customerNumber>?</urn1:customerNumber>\r
+         </urn:qualification>\r
+      </urn:customerRuleListAggregatedRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:srv.ren.enterprise.fs.edb.com:ws:customerrule:v15_1/RENSCustomerRuleService_V15_1PortType/customerRuleListAggregatedRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="1bd6c618-85de-41f5-b798-16784ae8e464" name="RENSCustomerRuleService_V15_1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="6fbef951-dd66-49de-b2e0-0522052a5f5e" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="customerRuleListAggregated TestCase" searchProperties="true" maxResults="0"><con:settings/><con:testStep type="request" id="ec71890a-617b-41bc-8b5e-54a97e130697" name="customerRuleListAggregated"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>RENSCustomerRuleService_V15_1PortTypeSoap11</con:interface><con:operation>customerRuleListAggregated</con:operation><con:request name="customerRuleListAggregated" id="5c76bb43-45c2-4aaa-8eb3-321c80cc9a5b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.246.89.245:10700/corewsdpgensrv/services/RENSCustomerRuleService_V15_1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsc="http://edb.com/ws/WSCommon_v21" xmlns:urn="urn:srv.ren.enterprise.fs.edb.com:ws:customerrule:v15_1" xmlns:urn1="urn:srv.ren.enterprise.fs.edb.com:domain:customerrule:v15_1">
+   <soapenv:Header>
+      <wsc:AutHeader>
+         <wsc:SourceApplication>${#Project#SourceApplication}</wsc:SourceApplication>
+         <wsc:DestinationApplication>${#Project#DestinationApplication}</wsc:DestinationApplication>
+         <wsc:Function>RENSCustomerRuleService_V15_1.customerRuleListAggregated</wsc:Function>
+         <wsc:Version>15_1</wsc:Version>
+         <wsc:ClientContext>
+            <wsc:userid>${#Project#UserId}</wsc:userid>
+            <wsc:credentials>03111012010400425MNh4tnSrY016OVtVL1neI9CfuAtjCBO603eS0IgWm1WWIO7EfpSL4DE%2FlDFi69n1sSaabKNt2t%2BxJppso23a37Emmmyjbdrfv48svWsuVEhDDKjyxg4Vq7EmmmyjbdrfsSaabKNt2t%2FXzlyjxYnxhcG46wcbIKp%2FsSaabKNt2t9wBUG0SyIoqFfig80Gq4uXVBtimDzTiu3EfQIWD5xMfuJ4EmMmR%2FCbEyZNkgHNOS0%3DCh1JEG0Kiz1T1vhqjUt2ZQ9LOD2S1dET%2FBWF940725QDjenb4S%2F%2BRph7%2F49btMoxO9OqvFy2pn0C0XWzQTp1bi3Mjy9qElOucw2YCD6VJbb%2FgIjjYhixv0o5j%2B2vKuuVAEOl8UtqXoNGbQh9VURQcHcbwMXVWAQr4FWjdCeygfE%3D</wsc:credentials>
+            <wsc:channel>${#Project#Channel}</wsc:channel>
+            <wsc:orgid>2844</wsc:orgid>
+            <!--Optional:-->
+            <wsc:orgunit xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <!--Optional:-->
+            <wsc:customerid xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <!--Optional:-->
+            <wsc:locale>${#Project#Locale}</wsc:locale>
+            <wsc:ip>${#Project#Ip}</wsc:ip>
+            <!--Zero or more repetitions:-->
+            <wsc:item key="?" value="?"/>
+         </wsc:ClientContext>
+      </wsc:AutHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <urn:customerRuleListAggregatedRequest>
+         <urn:qualification>
+            <urn1:customerNumber>45002221083</urn1:customerNumber>
+         </urn:qualification>
+      </urn:customerRuleListAggregatedRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="urn:srv.ren.enterprise.fs.edb.com:ws:customerrule:v15_1/RENSCustomerRuleService_V15_1PortType/customerRuleListAggregatedRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:requirements/><con:properties><con:property><con:name>ServiceEndpoint</con:name><con:value>http://10.246.89.245:10700/corewsdpgensrv</con:value></con:property><con:property><con:name>SourceApplication</con:name><con:value>RENS</con:value></con:property><con:property><con:name>DestinationApplication</con:name><con:value>CWS</con:value></con:property><con:property><con:name>UserId</con:name><con:value>e212577</con:value></con:property><con:property><con:name>Channel</con:name><con:value>BRA</con:value></con:property><con:property><con:name>Locale</con:name><con:value>en_EN</con:value></con:property><con:property><con:name>Ip</con:name><con:value>${=java.net.InetAddress.getLocalHost().getHostAddress()}</con:value></con:property></con:properties><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:xmlTemplates/><con:parameters/><con:parameters/></con:reporting><con:reporting/><con:authRepository/><con:tags/></con:soapui-project>
