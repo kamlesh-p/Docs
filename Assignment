@@ -1,0 +1,24 @@
+#1:
+Navigate to https://www.google.com/
+search 'Software testing'
+click on first link from search results.
+navigate back to search result page
+assert page title of search result.
+
+
+#2
+Navigate to https://translate.google.com/
+select language 'English' from language dropdown.
+select language 'Hindi' in translate to dropdown
+type software testing in translate from text area
+click translate button
+assert translated text.
+
+#3
+Navigate to https://www.google.com/
+search 'Software testing'
+click images tab.
+scroll down to end of the page and click 'show more results'
+scroll up the page and click tab 'All'
+
+
