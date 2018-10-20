@@ -27,4 +27,7 @@ click on 'Try it yourself >>' button under Alert box section.
 switch to try it editor tab and click button 'Try it'
 accept alert box and navigate back to main window.
 
-
+#5
+Navigate to https://en.wikipedia.org/wiki/Periodic_table
+From the Overview section click on element 'Selenium' (34)
+Count the number of times word 'selenium' is written in the page.
